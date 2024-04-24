@@ -9,4 +9,8 @@ add_executable(Laba_7 main.cpp
         SinglyLinkedList.h
         SingleNode.h
         StackArray.h
-        Stack.h)
+        Stack.h
+        QueueArray.h
+        Queue.h
+        PriorityNode.h
+        PriorityQueue.h)

@@ -3,6 +3,10 @@
 #include "DoubleLinkedList.h"
 #include "Stack.h"
 #include "StackArray.h"
+#include "Queue.h"
+#include "QueueArray.h"
+#include "PriorityQueue.h"
+
 
 using namespace std;
 
@@ -116,6 +120,68 @@ void Stacklist(){
     cout<<A.Peek()<<endl;
 
 }
+
+void StackArrayy(){
+    StackArray<int>A;
+    if (A.isEmpty())
+        cout<<"Stack is empty"<<endl;
+    A.push(2);
+    A.push(7);
+    A.push(2);
+    A.push(5);
+
+    cout<<A;
+    cout<<"Pop ";
+    A.pop();
+    cout<<A;
+    cout<<"Last element "<<A.peek()<<endl;
+}
+
+void Queuelist(){
+    Queue <int> B;
+    if(B.isEmpty())
+        cout<<"Is empty"<<endl;
+    B.Enqueue(3);
+    B.Enqueue(1);
+    B.Enqueue(8);
+    cout<<B;
+    B.Dequeue();
+    cout<<B;
+    cout<<B.Peek()<<endl;
+}
+
+void QueueArrayy(){
+    QueueArray<int>A;
+    if (A.isEmpty())
+        cout<<"Queue is empty"<<endl;
+    A.enqueue(5);
+    A.enqueue(2);
+    A.enqueue(7);
+    cout<<A;
+    if (A.isFull())
+        cout<<"Queue is full"<<endl;
+    else cout<<"Queue isn`t full"<<endl;
+    cout<<"Dequeue"<<endl;
+    A.dequeue();
+    cout<<A;
+    cout<<"First element in queue: "<<A.peek()<<endl;
+
+}
+
+void PriorList(){
+    Priority <int> C;
+//    if (C.isEmpty())
+//        cout<<"Is empty"<<endl;
+    C.insertAtEnd(1);
+    C.insertAtEnd(6);
+    C.insertAtEnd(2);
+    cout<<C;
+//    cout<<C.Peek()<<endl;
+    C.bubleSort();
+    cout<<C;
+    // cout<<C.Getsize();
+}
+
 int main() {
 
 //SingleList();
@@ -124,6 +190,20 @@ int main() {
 
     cout<<"Stack"<<endl;
     Stacklist();
+
+    cout<<"StackArray"<<endl;
+    StackArrayy();
+
+    cout<<"Queue"<<endl;
+    Queuelist();
+
+    cout<<"QueueArray"<<endl;
+    QueueArrayy();
+
+    cout<<"Priority queue"<<endl;
+    PriorList();
+
+    return 0;
 
 
 }
