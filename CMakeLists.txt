@@ -7,4 +7,6 @@ add_executable(Laba_7 main.cpp
         DoubleLinkedList.h
         DoubleNode.h
         SinglyLinkedList.h
-        SingleNode.h)
+        SingleNode.h
+        StackArray.h
+        Stack.h)

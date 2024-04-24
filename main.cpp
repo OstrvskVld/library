@@ -1,6 +1,8 @@
 #include <iostream>
 #include "SinglyLinkedList.h"
 #include "DoubleLinkedList.h"
+#include "Stack.h"
+#include "StackArray.h"
 
 using namespace std;
 
@@ -87,11 +89,41 @@ void DoubleList(){
     cout<<"Size of list: "<<B.getSize()<<endl;
     cout<<B[3]-B[2]<<endl;
 }
+
+void Stacklist(){
+    Stack <int> A;
+    if(A.isEmpty())
+        cout<<"is empty"<<endl;
+    else
+        cout<<"not empty"<<endl;
+//    cout<<A.Peek();
+//    A.Pop();
+    A.Push(1);
+    A.Push(2);
+    A.Push(3);
+    A.Push(12);
+    A.Push(52);
+    A.Push(2);
+    cout<<A;
+    if(A.isEmpty())
+        cout<<"is empty"<<endl;
+    else
+        cout<<"not empty"<<endl;
+    cout<<"Pop"<<endl;
+    A.Pop();
+    cout<<A;
+    cout<<"Peek"<<endl;
+    cout<<A.Peek()<<endl;
+
+}
 int main() {
 
-SingleList();
+//SingleList();
+//
+//DoubleList();
 
-DoubleList();
+    cout<<"Stack"<<endl;
+    Stacklist();
 
 
 }
