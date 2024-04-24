@@ -95,11 +95,14 @@ public:
         return current->data;
     }
 
-    int getSize() const { return size; }
+    int getSize() const
+    {
+        return size;
+    }
 
     void bubleSort() {
         if (!head || !head->next) {
-            return; // List is empty or has only one element, already sorted
+            return;
         }
 
         bool swapped;
@@ -118,21 +121,6 @@ public:
         } while (swapped);
     }
 
-    bool isCircularList() {
-        if (!head) {
-            return false;
-        }
-        shared_ptr<generic_node::Node<T>> slow = head;
-        shared_ptr<generic_node::Node<T>> fast = head;
-        while (fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-            if (slow == fast) {
-                return true;
-            }
-        }
-        return false;
-    }
 };
 
 

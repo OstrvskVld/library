@@ -9,37 +9,37 @@ template <typename T>
 class QueueArray{
     T *element;
     int front;
-    int rear;
+    int back;
     int capacity;
 public:
     QueueArray(){
         front = -1;
-        rear = -1;
+        back = -1;
         capacity = 10;
         element = new T[capacity];
     }
 
     bool isEmpty() const {
-        return front == -1 && rear == -1;
+        return front == -1 && back == -1;
     }
     bool isFull()const{
-        return rear == capacity;
+        return back == capacity;
     }
     void enqueue(T value){
         if (isEmpty()){
-            front = rear = 0;
+            front = back = 0;
         }else{
-            rear++;
+            back++;
         }
-        element[rear] = value;
+        element[back] = value;
     }
     T dequeue(){
         if (isEmpty()){
             throw std::underflow_error("Queue is empty");
         }
         T removedElem = element[front];
-        if (front == rear){
-            front = rear = -1;
+        if (front == back){
+            front = back = -1;
         }else{
             front++;
         }
@@ -57,7 +57,7 @@ public:
             os << "Queue is empty!!!";
         } else {
             int i = queue.front;
-            while (i != queue.rear) {
+            while (i != queue.back) {
                 os << queue.element[i] << " ";
                 i = (i + 1) % queue.capacity;
             }

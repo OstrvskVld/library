@@ -105,9 +105,9 @@ void Stacklist(){
     A.Push(1);
     A.Push(2);
     A.Push(3);
-    A.Push(12);
-    A.Push(52);
-    A.Push(2);
+    A.Push(4);
+    A.Push(5);
+    A.Push(6);
     cout<<A;
     if(A.isEmpty())
         cout<<"is empty"<<endl;
@@ -118,6 +118,7 @@ void Stacklist(){
     cout<<A;
     cout<<"Peek"<<endl;
     cout<<A.Peek()<<endl;
+    cout << "Size: " << A.Size() << endl;
 
 }
 
@@ -125,16 +126,17 @@ void StackArrayy(){
     StackArray<int>A;
     if (A.isEmpty())
         cout<<"Stack is empty"<<endl;
+    A.push(1);
     A.push(2);
-    A.push(7);
-    A.push(2);
-    A.push(5);
+    A.push(3);
+    A.push(4);
 
     cout<<A;
     cout<<"Pop ";
     A.pop();
     cout<<A;
-    cout<<"Last element "<<A.peek()<<endl;
+    cout<<"Last element: "<<A.peek()<<endl;
+    cout << "Size: " << A.Size() << endl;
 }
 
 void Queuelist(){
@@ -142,8 +144,8 @@ void Queuelist(){
     if(B.isEmpty())
         cout<<"Is empty"<<endl;
     B.Enqueue(3);
+    B.Enqueue(2);
     B.Enqueue(1);
-    B.Enqueue(8);
     cout<<B;
     B.Dequeue();
     cout<<B;
@@ -154,9 +156,9 @@ void QueueArrayy(){
     QueueArray<int>A;
     if (A.isEmpty())
         cout<<"Queue is empty"<<endl;
-    A.enqueue(5);
+    A.enqueue(1);
     A.enqueue(2);
-    A.enqueue(7);
+    A.enqueue(3);
     cout<<A;
     if (A.isFull())
         cout<<"Queue is full"<<endl;
@@ -172,14 +174,13 @@ void PriorList(){
     Priority <int> C;
 //    if (C.isEmpty())
 //        cout<<"Is empty"<<endl;
-    C.insertAtEnd(1);
+    C.insertAtEnd(4);
     C.insertAtEnd(6);
-    C.insertAtEnd(2);
+    C.insertAtEnd(8);
+    C.insertAtEnd(10);
     cout<<C;
-//    cout<<C.Peek()<<endl;
     C.bubleSort();
     cout<<C;
-    // cout<<C.Getsize();
 }
 
 int main() {
@@ -188,20 +189,20 @@ int main() {
 //
 //DoubleList();
 
-    cout<<"Stack"<<endl;
-    Stacklist();
+//    cout<<"Stack"<<endl;
+//    Stacklist();
 
-    cout<<"StackArray"<<endl;
-    StackArrayy();
+//    cout<<"StackArray"<<endl;
+//    StackArrayy();
 
-    cout<<"Queue"<<endl;
-    Queuelist();
+//    cout<<"Queue"<<endl;
+//    Queuelist();
 
-    cout<<"QueueArray"<<endl;
-    QueueArrayy();
-
-    cout<<"Priority queue"<<endl;
-    PriorList();
+//    cout<<"QueueArray"<<endl;
+//    QueueArrayy();
+//
+//    cout<<"Priority queue"<<endl;
+//    PriorList();
 
     return 0;
 

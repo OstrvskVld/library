@@ -100,6 +100,15 @@ public:
         return current->data;
     };
 
+    void Peek(){
+        if(isEmpty()){
+            throw out_of_range("Stack is empty");
+        }
+        else{
+            return head[0];
+        }
+    }
+
     void removeAtIndex(int index){
         checkIndex(index);
         if (index == 0) {
